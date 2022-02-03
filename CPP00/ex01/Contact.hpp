@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Contact.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: slathouw <slathouw@student.42.fr>          +#+  +:+       +#+        */
+/*   By: slathouw <slathouw@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/28 08:34:16 by slathouw          #+#    #+#             */
-/*   Updated: 2022/02/02 14:47:16 by slathouw         ###   ########.fr       */
+/*   Updated: 2022/02/03 09:41:08 by slathouw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,27 +19,40 @@
 class Contact
 {
 private:
-	int						index;
-	static std::string		headers[5];
-	std::string				fields[5];
+//attributes
+	int							index;
+	std::string					firstName;
+	std::string					lastName;
+	std::string					nickname;
+	std::string					phoneNumber;
+	std::string					darkestSecret;
+	static const std::string	fieldNames[5];
 
-	enum Field 
-	{
-		FirstName = 0,
-		LastName,
-		Nickname,
-		PhoneNumber,
-		DarkestSecret		
-	};
 public:
 //constructor-destructor
 	Contact();
-	virtual ~Contact();
+	~Contact();
 	
-//actions
-	bool	set_fields(int index);
-	void	disp_headers(void);
-	void	display(void);
+//accessors
+	void 			set_firstName(std::string firstName);
+	std::string		get_firstName(void);
+	
+	void 			set_lastName(std::string lastName);
+	std::string		get_lastName(void);
+	
+	void 			set_nickname(std::string nickname);
+	std::string		get_nickname(void);
+	
+	void 			set_phoneNumber(std::string phoneNumber);
+	std::string		get_phoneNumber(void);
+	
+	void 			set_darkestSecret(std::string darkestSecret);
+	std::string		get_darkestSecret(void);
+
+	const std::string	*get_fieldNames(void);
+	std::string			*get_fieldContents(void);
+	
+	void	init(int index);
 };
 
 #endif

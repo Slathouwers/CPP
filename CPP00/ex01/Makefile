@@ -6,7 +6,7 @@
 #    By: slathouw <slathouw@student.s19.be>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/25 08:50:43 by slathouw          #+#    #+#              #
-#    Updated: 2022/01/28 08:32:57 by slathouw         ###   ########.fr        #
+#    Updated: 2022/02/03 09:51:52 by slathouw         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ PURPLE = \033[0;95m
 BLUE = \033[0;34m
 BOLD = \033[1m
 
-SRCS		=	./main.cpp ./contact.cpp ./phonebook.cpp
+SRCS		=	./main.cpp ./Contact.cpp
 
 INCLUDES	=	.
 
