@@ -6,7 +6,7 @@
 /*   By: slathouw <slathouw@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/02 14:47:59 by slathouw          #+#    #+#             */
-/*   Updated: 2022/02/03 09:40:35 by slathouw         ###   ########.fr       */
+/*   Updated: 2022/02/04 11:15:25 by slathouw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,16 @@
 
 const std::string	Contact::fieldNames[5] =
 {
-	"First Name",
-	"Last Name",
-	"Nickname",
-	"Phone Number",
-	"Darkest Secret"
+	"FIRST NAME",
+	"LAST NAME",
+	"NICKNAME",
+	"PHONE NBR",
+	"DARKEST SECRET"
 };
 
 
 Contact::Contact()
 {
-	this->index = 0;
-	this->firstName = std::string();
-	this->lastName = std::string();
-	this->nickname = std::string();
-	this->phoneNumber = std::string();
-	this->darkestSecret = std::string();
 }
 
 Contact::~Contact()
@@ -64,19 +58,18 @@ std::string		*Contact::get_fieldContents(void)
 	return (contents);
 }
 
-void	Contact::init(int index)
+void	Contact::prompt_contact(int index)
 {
-	std::cout << "\033[2J";
 	this->index = index;
 	std::cout << "Fill in the following :" << std::endl;
-	std::cout << "FIRST NAME : >";
+	std::cout << "\t" << "FIRST NAME : >";
 	std::getline(std::cin, this->firstName);
-	std::cout << "LAST NAME : >";
+	std::cout << "\t" << "LAST NAME : >";
 	std::getline(std::cin, this->lastName);
-	std::cout << "NICKNAME : >";
+	std::cout << "\t" << "NICKNAME : >";
 	std::getline(std::cin, this->nickname);
-	std::cout << "PHONE NUMBER : >";
+	std::cout << "\t" << "PHONE NUMBER : >";
 	std::getline(std::cin, this->phoneNumber);
-	std::cout << "DARKEST SECRET : >";
+	std::cout << "\t" << "DARKEST SECRET : >";
 	std::getline(std::cin, this->darkestSecret);
 }
