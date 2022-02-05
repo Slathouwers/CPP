@@ -6,17 +6,9 @@
 #    By: slathouw <slathouw@student.s19.be>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/25 08:50:43 by slathouw          #+#    #+#              #
-#    Updated: 2022/01/28 08:27:57 by slathouw         ###   ########.fr        #
+#    Updated: 2022/02/05 21:21:24 by slathouw         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
-
-RESET = \033[0m
-RED = \033[0;91m
-ORANGE = \033[93m
-GREEN = \033[0;92m
-PURPLE = \033[0;95m
-BLUE = \033[0;34m
-BOLD = \033[1m
 
 SRCS		=	./megaphone.cpp
 
@@ -31,23 +23,23 @@ RM			= rm -f
 CFLAGS		= -Wall -Wextra -Werror -std=c++98
 
 .c.o:
-		@${CC} ${CFLAGS} -c $< -o ${<:.cpp=.o}
-		@echo "${GREEN}[ OK ]	${ORANGE}${<:.s=.o}${RESET}"
+		@${CC} ${CFLAGS} -I${INCLUDES} -c $< -o ${<:.cpp=.o}
+		@echo "${<:.s=.o}"
 
 
 all:		${NAME}
 
 ${NAME}:	${OBJS}
-			@${CC} ${CFLAGS} -o ${NAME} $(OBJS)
-			@echo "${GREEN}megaphone program has been created${RESET}"
+			@${CC} ${CFLAGS} -I${INCLUDES} -o ${NAME} $(OBJS)
+			@echo "${NAME}  program	has been create"
 
 clean:
 			@${RM} ${OBJS}
-			@echo "${GREEN}[ OK ]${RED}	object files deleted${RESET}"
+			@echo "*.o files	deleted"
 
 fclean:		clean
 			@${RM} ${NAME}
-			@echo "${GREEN}[ OK ]${RED}	megaphone program deleted${RESET}"
+			@echo "${NAME} program	deleted"
 
 re :		fclean all
 
