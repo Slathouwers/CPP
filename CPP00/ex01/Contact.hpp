@@ -6,7 +6,7 @@
 /*   By: slathouw <slathouw@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/28 08:34:16 by slathouw          #+#    #+#             */
-/*   Updated: 2022/02/03 09:41:08 by slathouw         ###   ########.fr       */
+/*   Updated: 2022/02/04 07:19:10 by slathouw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,8 +51,8 @@ public:
 
 	const std::string	*get_fieldNames(void);
 	std::string			*get_fieldContents(void);
-	
-	void	init(int index);
+//actions
+	void	prompt_contact(int index);
 };
 
 #endif
