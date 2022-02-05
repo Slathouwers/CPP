@@ -6,7 +6,7 @@
 #    By: slathouw <slathouw@student.s19.be>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/25 08:50:43 by slathouw          #+#    #+#              #
-#    Updated: 2022/02/03 09:51:52 by slathouw         ###   ########.fr        #
+#    Updated: 2022/02/04 11:08:05 by slathouw         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ PURPLE = \033[0;95m
 BLUE = \033[0;34m
 BOLD = \033[1m
 
-SRCS		=	./main.cpp ./Contact.cpp
+SRCS		=	./Contact.cpp ./Phonebook.cpp ./main.cpp 
 
 INCLUDES	=	.
 
@@ -43,7 +43,7 @@ all:		${NAME}
 
 ${NAME}:	${OBJS}
 			@${CC} ${CFLAGS} -I${INCLUDES} -o ${NAME} $(OBJS)
-			@echo "${GREEN}megaphone  program	has been created${RESET}"
+			@echo "${GREEN} ${NAME}  program	has been created${RESET}"
 
 clean:
 			@${RM} ${OBJS}
@@ -51,7 +51,7 @@ clean:
 
 fclean:		clean
 			@${RM} ${NAME}
-			@echo "${GREEN}[ OK ]${RED}	megaphone program	deleted${RESET}"
+			@echo "${GREEN}[ OK ]${RED}	${NAME} program	deleted${RESET}"
 
 re :		fclean all
 
