@@ -6,7 +6,7 @@
 #    By: slathouw <slathouw@student.s19.be>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/25 08:50:43 by slathouw          #+#    #+#              #
-#    Updated: 2022/02/05 21:21:31 by slathouw         ###   ########.fr        #
+#    Updated: 2022/02/06 09:19:24 by slathouw         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ INCLUDES	=	.
 
 NAME		= phonebook
 
-CC			= c++
+CC			= clang++
 
 OBJS		= ${SRCS:.cpp=.o}
 
