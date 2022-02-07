@@ -6,7 +6,7 @@
 /*   By: slathouw <slathouw@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/07 10:39:29 by slathouw          #+#    #+#             */
-/*   Updated: 2022/02/07 10:46:13 by slathouw         ###   ########.fr       */
+/*   Updated: 2022/02/07 10:59:19 by slathouw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	const Fixed::_fractionalBits = 8;
 
-Fixed::Fixed(int rawbits = 0)
+Fixed::Fixed(int rawbits)
 :_rawBits(rawbits)
 {
 	std::cout << "Default constructor called" << std::endl;

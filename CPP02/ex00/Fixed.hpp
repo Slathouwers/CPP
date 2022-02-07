@@ -6,7 +6,7 @@
 /*   By: slathouw <slathouw@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/07 10:08:11 by slathouw          #+#    #+#             */
-/*   Updated: 2022/02/07 10:44:22 by slathouw         ###   ########.fr       */
+/*   Updated: 2022/02/07 10:59:09 by slathouw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ private:
 	int					_rawBits;
 	static const int	_fractionalBits;
 public:
-	Fixed(int rawbits);  //Default constructor
+	Fixed(int rawbits = 0);  //Default constructor
 	Fixed(Fixed const &rhs); //copy constructor
 	~Fixed();				//Destructor
 	Fixed &operator=(Fixed const &rhs); //copy assignment operator
