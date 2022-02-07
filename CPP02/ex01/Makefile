@@ -6,15 +6,15 @@
 #    By: slathouw <slathouw@student.s19.be>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/25 08:50:43 by slathouw          #+#    #+#              #
-#    Updated: 2022/02/07 10:13:49 by slathouw         ###   ########.fr        #
+#    Updated: 2022/02/07 10:14:02 by slathouw         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS		= main.cpp Karen.cpp
+SRCS		= main.cpp 
 
 INCLUDES	=	.
 
-NAME		= Karen
+NAME		= 
 
 CC			= c++
 
