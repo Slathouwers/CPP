@@ -1,0 +1,37 @@
+For triangle ABC and point M:
+
+	Vectors v1, v2, v3 orthagonal (perpendicular) to [AB], [BC], [CA] respectively:
+
+	v1 = <-(y2-y1), x2-x1>
+	v2 = <-(y3-y2), x3-x2>
+	v2 = <-(y1-y3), x1-x3>
+
+	Vectors [M(Vertex)]:
+
+	v1' = <xM-x1, yM-y1>
+	v2' = <xM-x2, yM-y2>
+	v3' = <xM-x3, yM-y2>
+
+	Dot product duality => projected scalar multiplication
+						=> if 0 then projection on perpendicular = 0
+						=> then M is ON the line through AB
+						=> if > 0 then it's on left side, if < 0 then right side
+	v1.v1' = (y2 - y1)*(x - x1) + (-x2 + x1)*(y - y1)
+	v2.v2' = (y3 - y2)*(x - x2) + (-x3 + x2)*(y - y2)
+	v3.v3' = (y1 - y3)*(x - x3) + (-x1 + x3)*(y - y3)
+
+	int dotSide(p1, p2, m)
+		if v.v' > 0 return 1
+		if v.v' < 0 return -1
+		if v.v	== 0 return 0
+
+float dot(fPoint p1, fPoint p2, fPoint p3)
+{
+    return (p1.x - p3.x) * (p2.y - p3.y) - (p2.x - p3.x) * (p1.y - p3.y);
+}
+
+	
+	one_side = (dot1 < 0) || (dot2 < 0) || (dot3 < 0);
+	other_side = (dot1 < 0) || (dot2 < 0) || (dot3 < 0);
+
+	return !(one_side && other_side)
