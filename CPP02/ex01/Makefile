@@ -6,15 +6,15 @@
 #    By: slathouw <slathouw@student.s19.be>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/25 08:50:43 by slathouw          #+#    #+#              #
-#    Updated: 2022/02/07 10:14:02 by slathouw         ###   ########.fr        #
+#    Updated: 2022/02/07 10:57:52 by slathouw         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS		= main.cpp 
+SRCS		= main.cpp Fixed.cpp
 
 INCLUDES	=	.
 
-NAME		= 
+NAME		= MoreUsefulFixedPoint
 
 CC			= c++
 
