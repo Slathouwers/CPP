@@ -6,15 +6,15 @@
 #    By: slathouw <slathouw@student.s19.be>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/25 08:50:43 by slathouw          #+#    #+#              #
-#    Updated: 2022/02/07 08:23:17 by slathouw         ###   ########.fr        #
+#    Updated: 2022/02/07 14:16:07 by slathouw         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS		= main.cpp 
+SRCS		= main.cpp Fixed.cpp
 
 INCLUDES	=	.
 
-NAME		= 
+NAME		= NowWeReTalking
 
 CC			= c++
 
