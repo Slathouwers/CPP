@@ -6,7 +6,7 @@
 /*   By: slathouw <slathouw@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/07 10:39:29 by slathouw          #+#    #+#             */
-/*   Updated: 2022/02/07 14:20:08 by slathouw         ###   ########.fr       */
+/*   Updated: 2022/02/08 07:28:34 by slathouw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ int	const Fixed::_fractionalBits = 8;
 	}
 
 	// float multiplied by 2^_fractionalBits and then rounded to nearest int = Fixed bit representation
-	Fixed::Fixed(float f) :_rawBits(std::round(f * (1 << _fractionalBits)))
+	Fixed::Fixed(float f) :_rawBits((int) roundf(f * (1 << _fractionalBits)))
 	{
 	}
 	
