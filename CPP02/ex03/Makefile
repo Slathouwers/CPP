@@ -6,11 +6,11 @@
 #    By: slathouw <slathouw@student.s19.be>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/25 08:50:43 by slathouw          #+#    #+#              #
-#    Updated: 2022/02/07 10:14:06 by slathouw         ###   ########.fr        #
+#    Updated: 2022/02/08 08:47:51 by slathouw         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS		= main.cpp 
+SRCS		= main.cpp Fixed.cpp Point.cpp bsp.cpp
 
 INCLUDES	=	.
 
