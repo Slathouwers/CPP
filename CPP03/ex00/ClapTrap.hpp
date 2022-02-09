@@ -6,7 +6,7 @@
 /*   By: slathouw <slathouw@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 14:12:56 by slathouw          #+#    #+#             */
-/*   Updated: 2022/02/08 14:51:20 by slathouw         ###   ########.fr       */
+/*   Updated: 2022/02/09 09:03:23 by slathouw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,6 @@
 class ClapTrap
 {
 private:
-	const std::string type;
-	const int maxHP;
-	const int maxEP;
-	const int maxAT;
 	std::string _name;
 	unsigned int _hp;
 	unsigned int _ep;
@@ -37,6 +33,12 @@ public:
 	~ClapTrap();
 //operators
 	ClapTrap &operator=(ClapTrap const &rhs);
+//accessors
+	std::string getName(void);
+	void setName(std::string name);
+	unsigned int getHitPoints(void);
+	unsigned int getEnergyPoints(void);
+	unsigned int getAttackDamage(void);
 //methods
 	void attack(const std::string &target);
 	void takeDamage(unsigned int amount);
