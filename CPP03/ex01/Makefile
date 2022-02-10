@@ -6,15 +6,15 @@
 #    By: slathouw <slathouw@student.s19.be>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/25 08:50:43 by slathouw          #+#    #+#              #
-#    Updated: 2022/02/08 14:08:19 by slathouw         ###   ########.fr        #
+#    Updated: 2022/02/10 09:07:50 by slathouw         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS		= main.cpp ScavTrapp.cpp ClapTrap.cpp
+SRCS		= main.cpp ScavTrap.cpp ClapTrap.cpp
 
 INCLUDES	=	.
 
-NAME		= BSP
+NAME		= SerenaMyLove
 
 CC			= c++
 
