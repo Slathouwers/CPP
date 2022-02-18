@@ -6,11 +6,11 @@
 #    By: slathouw <slathouw@student.s19.be>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/25 08:50:43 by slathouw          #+#    #+#              #
-#    Updated: 2022/02/10 14:47:27 by slathouw         ###   ########.fr        #
+#    Updated: 2022/02/17 11:56:00 by slathouw         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS		= main.cpp ClapTrap.cpp ScavTrapp.cpp FragTrap.cpp
+SRCS		= main.cpp ClapTrap.cpp ScavTrap.cpp
 
 INCLUDES	=	.
 

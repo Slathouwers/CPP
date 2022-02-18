@@ -6,7 +6,7 @@
 /*   By: slathouw <slathouw@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 14:12:56 by slathouw          #+#    #+#             */
-/*   Updated: 2022/02/10 08:50:20 by slathouw         ###   ########.fr       */
+/*   Updated: 2022/02/17 11:59:01 by slathouw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,9 @@
 
 #ifndef CLAPTRAP_HPP
 # define CLAPTRAP_HPP
+
+# define CLAP_COLOR "\e[0;34m"
+# define CLAP_RESET "\e[0m"
 
 # include <iostream>
 

@@ -6,7 +6,7 @@
 /*   By: slathouw <slathouw@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 14:12:58 by slathouw          #+#    #+#             */
-/*   Updated: 2022/02/10 07:59:31 by slathouw         ###   ########.fr       */
+/*   Updated: 2022/02/17 12:01:17 by slathouw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,19 +19,19 @@
 	ClapTrap::ClapTrap() //default
 	: _type(std::string("ClapTrap")), _name(std::string()), _hp(10), _ep(10), _attack(0)
 	{
-		std::cout << "<default> ClapTrap constructed: It's alive... but what shall we call it?"<<std::endl;
+		std::cout << CLAP_COLOR "<default> ClapTrap constructed: It's alive... but what shall we call it?" CLAP_RESET <<std::endl;
 	}
 
 	ClapTrap::ClapTrap(std::string name)
 	: _type(std::string("ClapTrap")), _name(name), _hp(10), _ep(10), _attack(0)
 	{
-		std::cout << "<" << _name << "> ClatpTrap constructed: Maybe we should put a leash on this thing?!"<<std::endl;
+		std::cout << CLAP_COLOR "<" << _name << "> ClatpTrap constructed: Maybe we should put a leash on this thing?!" CLAP_RESET <<std::endl;
 	}
 
 	ClapTrap::ClapTrap(ClapTrap const &rhs) //copy
 	: _type(rhs._type), _name(rhs._name), _hp(rhs._hp), _ep(rhs._ep), _attack(rhs._attack)
 	{
-		std::cout << "<" << _name << "> ClatpTrap copy constructed: They're replicating?! AAH!"<<std::endl;
+		std::cout << CLAP_COLOR "<" << _name << "> ClatpTrap copy constructed: They're replicating?! AAH!" CLAP_RESET <<std::endl;
 	}
 
 /* ********************** */
@@ -40,7 +40,7 @@
 
 	ClapTrap::~ClapTrap()
 	{
-		std::cout << "<" << _name << "> ClatpTrap disintegrated! There's nothing left!" <<std::endl;
+		std::cout << CLAP_COLOR "<" << _name << "> ClatpTrap disintegrated! There's nothing left!" CLAP_RESET <<std::endl;
 	}
 
 /* ********************** */
@@ -81,13 +81,13 @@
 		if (! _hp || ! _ep)
 		{
 			std::cout 
-			<< "ClapTrap " << _name << " CAN NOT attack "<< target
-			<< ", it has only "<< _hp <<" HP and "<<_ep <<" EP left." << std::endl;
+			<< CLAP_COLOR "ClapTrap " << _name << " CAN NOT attack "<< target
+			<< ", it has only "<< _hp <<" HP and "<<_ep <<" EP left." CLAP_RESET << std::endl;
 			return ;
 		}
 		std::cout 
-			<< "ClapTrap " << _name << " attacks "<< target
-			<<", causing " << _attack << " points of damage!" << std::endl;
+			<< CLAP_COLOR "ClapTrap " << _name << " attacks "<< target
+			<<", causing " << _attack << " points of damage!" CLAP_RESET << std::endl;
 		_ep--;
 	}
 
@@ -101,11 +101,11 @@
 			damage = amount;
 		_hp -= damage;
 		std::cout 
-			<< "ClapTrap " << _name << " was attacked for "<< amount
+			<< CLAP_COLOR "ClapTrap " << _name << " was attacked for "<< amount
 			<<", causing " << damage << " points of damage!";
 		if (!_hp)
 			std::cout << "It's dead!";
-		std::cout << std::endl;
+		std::cout << CLAP_RESET << std::endl;
 	}
 
 	void ClapTrap::beRepaired(unsigned int amount)
@@ -113,12 +113,12 @@
 		if (!_hp || !_ep)
 		{
 			std::cout 
-			<< "ClapTrap " << _name << " CAN NOT be repaired for "<< amount<< "HP"
-			<< ", it has only "<< _hp <<" HP and "<<_ep <<" EP left." << std::endl;
+			<< CLAP_COLOR "ClapTrap " << _name << " CAN NOT be repaired for "<< amount<< "HP"
+			<< ", it has only "<< _hp <<" HP and "<<_ep <<" EP left." CLAP_RESET << std::endl;
 			return ;
 		}
 		_hp += amount;
 		_ep--;
 		std::cout 
-			<< "ClapTrap " << _name << " repaired for "<< amount<< " HP." << std::endl;
+			<< "ClapTrap " << _name << " repaired for "<< amount<< " HP." CLAP_RESET << std::endl;
 	}
