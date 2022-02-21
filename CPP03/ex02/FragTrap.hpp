@@ -6,7 +6,7 @@
 /*   By: slathouw <slathouw@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 10:40:42 by slathouw          #+#    #+#             */
-/*   Updated: 2022/02/21 11:13:21 by slathouw         ###   ########.fr       */
+/*   Updated: 2022/02/21 11:46:22 by slathouw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,11 +37,5 @@ public:
 //methods
 	void highFivesGuys(void);
 };
-
-
-FragTrap::~FragTrap()
-{
-	std::cout << FRAG_COLOR "<" << _name << "> ScavTrap disintegrated! There's nothing left!" FRAG_RESET << std::endl;
-}
 
 #endif

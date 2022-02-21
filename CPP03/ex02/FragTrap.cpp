@@ -6,7 +6,7 @@
 /*   By: slathouw <slathouw@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 10:41:05 by slathouw          #+#    #+#             */
-/*   Updated: 2022/02/21 11:12:33 by slathouw         ###   ########.fr       */
+/*   Updated: 2022/02/21 11:51:37 by slathouw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,11 +47,30 @@ FragTrap::FragTrap(FragTrap const &rhs) //copy
 /*		Destructor		  */
 /* ********************** */
 
+FragTrap::~FragTrap()
+{
+	std::cout << FRAG_COLOR "<" << _name << "> ScavTrap disintegrated! There's nothing left!" FRAG_RESET << std::endl;
+}
+
 /* ********************** */
 /*		Operators		  */
 /* ********************** */
 
-	
+FragTrap &FragTrap::operator=(FragTrap const &rhs)
+{
+	_type = rhs._type;
+	_name = rhs._name;
+	_hp = rhs._hp;
+	_ep = rhs._ep;
+	_attack = rhs._attack;
+	return (*this);
+}
+
 /* ********************** */
 /*		Methods			  */
 /* ********************** */
+
+void FragTrap::highFivesGuys(void)
+{
+	std::cout << FRAG_COLOR "!" << _name << "! ScavTrap WANTS A HIGH FIVE GUYS! Who's in?!" FRAG_RESET << std::endl;
+}
