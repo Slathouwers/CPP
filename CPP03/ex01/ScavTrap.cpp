@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ScavTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: slathouw <slathouw@student.s19.be>         +#+  +:+       +#+        */
+/*   By: slathouw <slathouw@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/10 07:36:20 by slathouw          #+#    #+#             */
-/*   Updated: 2022/02/17 11:54:58 by slathouw         ###   ########.fr       */
+/*   Updated: 2022/02/21 11:38:45 by slathouw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,10 @@
 	
 	ScavTrap::ScavTrap(ScavTrap const &rhs)
 	{
+		this->_type = rhs._type;
+		this->_hp = rhs._hp;
+		this->_ep = rhs._hp;
+		this->_name = rhs._name;
 		std::cout << SCAV_COLOR "<" << _name << "> ScavTrap copy constructed: They're replicating?! AAH!" SCAV_RESET <<std::endl;
 	}
 	
@@ -85,6 +89,3 @@
 	{
 		std::cout << SCAV_COLOR "ScavTrap " << this->getName() << " have enterred in Gate keeper mode." SCAV_RESET << std::endl;
 	}
-
-
-
