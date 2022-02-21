@@ -1,34 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   DiamondTrap.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: slathouw <slathouw@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/09 09:22:23 by slathouw          #+#    #+#             */
-/*   Updated: 2022/02/21 13:07:29 by slathouw         ###   ########.fr       */
+/*   Created: 2022/02/21 13:00:41 by slathouw          #+#    #+#             */
+/*   Updated: 2022/02/21 13:23:39 by slathouw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef DIAMONDTRAP_HPP
+# define DIAMONDTRAP_HPP
+
+#include <iostream>
 #include "FragTrap.hpp"
 #include "ScavTrap.hpp"
 
-
-int main(void)
+class DiamondTrap : virtual FragTrap, virtual ScavTrap
 {
-	ScavTrap scav("MyScav");
-	ClapTrap clap("MyClap");
-	FragTrap frag("myFrag");
-	FragTrap cpyFrag(frag);
+private:
+	std::string _name;
 	
-	FragTrap deffy;
-	
-	deffy.setName("Deffy Default");
+public:
+//constructor
+	DiamondTrap(); //default
+	DiamondTrap(std::string name);
+	DiamondTrap(DiamondTrap const &rhs);
+//destructor
+	~DiamondTrap();
+//operators
+	DiamondTrap &operator=(DiamondTrap const &rhs);
+};
 
-	scav.guardGate();
-	frag.attack(scav.getName());
-	frag.takeDamage(5000);
-	scav.attack(deffy.getName());
-	
-	cpyFrag.highFivesGuys();
+DiamondTrap::DiamondTrap()
+{
 }
+
+DiamondTrap::~DiamondTrap()
+{
+}
+
+
+
+
+#endif
