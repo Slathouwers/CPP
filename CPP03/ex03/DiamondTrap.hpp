@@ -6,7 +6,7 @@
 /*   By: slathouw <slathouw@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 13:00:41 by slathouw          #+#    #+#             */
-/*   Updated: 2022/02/21 13:23:39 by slathouw         ###   ########.fr       */
+/*   Updated: 2022/02/22 12:08:38 by slathouw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,11 @@
 # define DIAMONDTRAP_HPP
 
 #include <iostream>
+#include "ClapTrap.hpp"
 #include "FragTrap.hpp"
 #include "ScavTrap.hpp"
 
-class DiamondTrap : virtual FragTrap, virtual ScavTrap
+class DiamondTrap : public FragTrap, public ScavTrap
 {
 private:
 	std::string _name;

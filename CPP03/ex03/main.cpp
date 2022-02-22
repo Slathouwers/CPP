@@ -6,10 +6,11 @@
 /*   By: slathouw <slathouw@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/09 09:22:23 by slathouw          #+#    #+#             */
-/*   Updated: 2022/02/21 13:08:21 by slathouw         ###   ########.fr       */
+/*   Updated: 2022/02/22 12:13:59 by slathouw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "ClapTrap.hpp"
 #include "ScavTrap.hpp"
 #include "FragTrap.hpp"
 #include "DiamondTrap.hpp"
